@@ -71,12 +71,22 @@ header{
     font-weight: 700;
 }
 
+.logo:hover{
+    color: var(--warna2);
+}
+
 .nav-bar{
     padding-right: 4rem;
     color: var(--warna2);
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    gap: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav-bar{
+        display: none;
+    }
 }
 
 /* INTRODUCTION */
@@ -94,24 +104,51 @@ header{
 .introduction h1{
     font-size: 60px;
     text-align: left;
+    line-height: 65px
 }
 
 .data{
     padding-right: 20px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .photo-izzat{
     width: 35%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .photo-izzat{
+        width: 50%;
+        min-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .data{
+        padding: 3rem 0 0 0;
+    }
+
+    .introduction{
+        padding: 0 auto 0 auto;
+    }
 }
 
 /*INTEREST*/
 .interests{
-    height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: var(--warna2);
     color: var(--warna1);
+    padding: 25px 0;
+    min-height: 100vh;
+}
+
+.interests h1{
+    padding: 20px;
 }
 
 .interests-gallery{
@@ -125,7 +162,7 @@ header{
 }
 
 .interests-gallery div{
-    padding: 0 20px 20px 20px;
+    padding: 20px;
 }
 
 .interests-gallery h3{
@@ -145,17 +182,25 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    min-height: 100vh;
     align-items: center;
-    padding-bottom: 100px;
 }
 
 .projects h1{
     text-align: center;
+    padding: 2rem 0 0 0;
 }
 
 .projects h3{
     padding: 9% 50px 9% 0;
     text-align: left;
+}
+
+/* ACHIEVEMENTS */
+.achievements{
+    min-height: 100vh;
+    color: var(--warna1);
+    background-color: var(--warna2);
 }
 
 /* CONTACTS */
